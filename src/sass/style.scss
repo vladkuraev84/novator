@@ -1,0 +1,26 @@
+@import "utils/normalize";
+@import "utils/fonts";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/burger";
+@import "utils/button";
+@import "utils/helpers";
+
+
+// PAGE COMPONENTS
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/contact";
+
+@import "blocks/portfolio";
+@import "blocks/slider";
+@import "blocks/slick";
+@import "blocks/popup";
+@import "blocks/social";
+@import "blocks/animation";
+@import "blocks/footer";
+
+
+.icon {
+  display: inline-block;
+}

@@ -1,0 +1,26 @@
+.footer {
+
+  width: 100%;
+  background: $bacFooter;
+  flex: 0 auto;
+  padding: 1.813rem 1.875rem;
+
+  @include flexBox(space-between, row, center);
+
+  ul {
+    width: auto;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @include respond-to(phone) {
+      font-size: 12px;
+    }
+  }
+
+  @include respond-to(phone) {
+    padding: 14px 1.875rem;
+  }
+
+}

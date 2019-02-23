@@ -1,0 +1,16 @@
+
+.social {
+  li {
+    margin: 0 -5px 0 15px;
+  }
+
+  a {
+    padding: 0 5px;
+    @include flexBox(center, column, center);
+  }
+
+  img {
+    width: 32px;
+  }
+
+}

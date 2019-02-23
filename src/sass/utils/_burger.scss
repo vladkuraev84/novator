@@ -1,0 +1,169 @@
+/*  COLORS
+========================================= */
+
+$colorDot: $colorBurger;
+
+/*  MIXINS
+========================================= */
+
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+  -moz-animation: #{$animation};
+  -o-animation: #{$animation};
+  animation: #{$animation};
+}
+
+@mixin animation-delay($animation-delay) {
+  -webkit-transition-delay: #{$animation-delay};
+  -moz-transition-delay: #{$animation-delay};
+  -o-transition-delay: #{$animation-delay};
+  transition-delay: #{$animation-delay};
+}
+
+@mixin keyframes($keyframes) {
+  @-webkit-keyframes #{$keyframes} { @content; }
+  @-moz-keyframes #{$keyframes} { @content; }
+  @-o-keyframes #{$keyframes} { @content; }
+  @keyframes #{$keyframes} { @content; }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: #{$transition};
+  -moz-transition: #{$transition};
+  -o-transition: #{$transition};
+  transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: #{$transition-delay};
+  -moz-transition-delay: #{$transition-delay};
+  -o-transition-delay: #{$transition-delay};
+  transition-delay: #{$transition-delay};
+}
+
+
+/*  MENU ICON
+========================================= */
+
+
+.menu-icon {
+  position: absolute;
+  top: 21px;
+  right: 30px;
+  cursor: pointer;
+  //@include transform(translate(-50%, -50%));
+  width: 18px;
+  height: 18px;
+  z-index: 7;
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+
+  @media only screen and (min-width: 813px) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $colorDot;
+    border-radius: 0;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+
+  &.clicked {
+
+  }
+}
+
+.menu-icon span:nth-child(even) {
+  left: 0;
+  border-radius: 0;
+}
+
+.menu-icon span:nth-child(odd) {
+  left:0;
+  border-radius: 0;
+}
+
+.menu-icon span:nth-child(1), .menu-icon span:nth-child(2) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(3), .menu-icon span:nth-child(4) {
+  top: 7px;
+}
+
+.menu-icon span:nth-child(5), .menu-icon span:nth-child(6) {
+  top: 15px;
+}
+
+.menu-icon.clicked span:nth-child(1),.menu-icon.clicked span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-icon.clicked span:nth-child(2),.menu-icon.clicked span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu-icon.clicked span:nth-child(1) {
+  left: 0;
+  top: 7px;
+}
+
+.menu-icon.clicked span:nth-child(2) {
+  left: 0;
+  top: 7px;
+}
+
+.menu-icon.clicked span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.menu-icon.clicked span:nth-child(4) {
+  left: 50%;
+  opacity: 0;
+}
+
+.menu-icon.clicked span:nth-child(5) {
+  left: 0;
+  top: 7px;
+}
+
+.menu-icon.clicked span:nth-child(6) {
+  left: 0;
+  top: 7px;
+}
